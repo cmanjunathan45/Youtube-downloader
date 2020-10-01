@@ -15,10 +15,10 @@ except:
 
 
 root=tk.Tk()
-root.geometry("500x400")
+root.geometry("500x600")
 root.config(bg="#2D2926")
 root.title("Youtube Video Downloader | Manjunathan C")
-root.iconphoto(False,tk.PhotoImage(file="icon.png"))
+root.iconphoto(True,tk.PhotoImage(file="icon.png"))
 
 def mp4():
 	try:
@@ -50,22 +50,26 @@ entry=Entry(root,font=("fontawesome",12,"bold italic"),bg="#E94B3C",fg="#2D2926"
 entry.place(x=55,y=120)
 
 label2=Label(root,text="Download",bg="#2D2926",fg="#E94B3C",font=("font awesome",12,"bold italic"))
-label2.place(x=215,y=170)
+label2.place(x=210,y=170)
 
-button1=Button(root,font=("fontawesome",12,"bold italic"),text="Video",bg="#E94B3C",fg="#2D2926",command=mp4)
-button1.place(x=140,y=200)
 
-button2=Button(root,font=("fontawesome",12,"bold italic"),text="Audio",bg="#E94B3C",fg="#2D2926",command=mp3)
-button2.place(x=300,y=200)
 
-buttonclear=Button(root,text="CLEAR",font=("fontawesome",11,"bold italic"),bg="#E94B3C",fg="#2D2926",command=lambda: entry.delete(0,END))
-buttonclear.place(x=140,y=240)
+button1=Button(root,font=("fontawesome",12,"bold italic"),text="Video",bg="#E94B3C",fg="#2D2926",borderwidth=5,width=10,activebackground="#181818",command=mp4)
+button1.place(x=180,y=200)
 
-buttexit=Button(root,text="EXIT",font=("fontawesome",11,"bold italic"),bg="#E94B3C",fg="#2D2926",command=root.quit)
-buttexit.place(x=300,y=240)
+button2=Button(root,font=("fontawesome",12,"bold italic"),text="Audio",bg="#E94B3C",fg="#2D2926",borderwidth=5,width=10,activebackground="#181818",command=mp3)
+button2.place(x=180,y=260)
 
-buttonc=Button(root,text="CONTACT",font=("fontawesome",12,"bold italic"),bg="#E94B3C",fg="#2D2926",command=lambda: webbrowser.open("https://github.com/cmanjunathan45/"))
-buttonc.place(x=205,y=280)
+buttonclear=Button(root,text="Clear",font=("fontawesome",12,"bold italic"),bg="#E94B3C",fg="#2D2926",borderwidth=5,width=10,activebackground="#181818",command=lambda: entry.delete(0,END))
+buttonclear.place(x=180,y=320)
 
+buttexit=Button(root,text="Exit",font=("fontawesome",12,"bold italic"),bg="#E94B3C",fg="#2D2926",borderwidth=5,width=10,activebackground="#181818",command=root.quit)
+buttexit.place(x=180,y=380)
+
+buttoncontact=Button(root,text="Contact",font=("fontawesome",12,"bold italic"),bg="#E94B3C",fg="#2D2926",borderwidth=5,width=10,activebackground="#181818",command=lambda: webbrowser.open("https://github.com/cmanjunathan45/"))
+buttoncontact.place(x=180,y=440)
+
+buttonPlaylist=Button(root,text="Playlist Downloader",font=("fontawesome",12,"bold italic"),bg="#E94B3C",fg="#2D2926",borderwidth=5,width=15,activebackground="#181818",command=lambda: webbrowser.open("https://github.com/cmanjunathan45/youtube-playlist-downloader"))
+buttonPlaylist.place(x=150,y=500)
 
 root.mainloop()
